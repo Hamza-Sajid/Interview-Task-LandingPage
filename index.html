@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/dist/output.css" rel="stylesheet">
+    <script type="text/javascript" src="index.js"></script>
+
+</head>
+<body>
+
+        <header>
+            <!-- Navbar code -->
+
+            <nav class=" justify-start  items-center  mt-6 hidden sm:flex">
+                <div class="w-2/12 ">
+                    <img class="ml-12" width="100" src="./images/logo.svg" >
+                </div>
+                <div class="w-3/5">
+
+                    <ol>
+                        <li onclick="desktopNavBar1()" class="inline pl-6 pFont text-gray-600 cursor-pointer hover:text-gray-900">Features
+                            <img  class="inline" width="10" src="./images/icon-arrow-down.svg">
+                        </li>
+                        <div id="navListItem1"  style="display: none;" class="absolute bg-white rounded-lg shadow-xl w-52  m-auto mt-6">
+                            
+
+
+                            <li  class="pFont text-gray-600 text-lg ml-8 mt-6 hover:text-black cursor-pointer">
+                                <img src="./images/icon-todo.svg" width="20" class="inline mr-2 " >
+                                Todo list</li>
+                                <li  class="pFont text-gray-600 text-lg ml-8 mt-4 hover:text-black cursor-pointer">
+                                    <img src="./images/icon-calendar.svg" width="20" class="inline mr-2" >
+                                Calander</li>
+                                <li  class="pFont text-gray-600 text-lg ml-8 mt-4 hover:text-black cursor-pointer">
+                                    <img src="./images/icon-reminders.svg" width="20" class="inline mr-2" >
+                                Reminders</li>
+
+                                <li  class="pFont text-gray-600 text-lg ml-8 mt-4 mb-6 hover:text-black cursor-pointer">
+                                    <img src="./images/icon-planning.svg" width="20" class="inline mr-2" >
+                                    Planing</li>
+
+
+
+
+                        </div>
+                        <li  onclick="desktopNavBar2()"  class="inline pl-6 pFont text-gray-600 cursor-pointer hover:text-black">Company
+                            <img class="inline" width="10" src="./images/icon-arrow-down.svg">
+                        </li>
+
+                        <div id="navListItem2" style="display: none;  margin-left: 1em;"  class="absolute bg-white rounded-lg shadow-xl w-52  m-auto mt-6  left-80">
+                            <li  class="pFont text-gray-600 text-lg ml-8 mt-4 hover:text-black cursor-pointer">
+                               
+                                History</li>
+                                <li  class="pFont text-gray-600 text-lg ml-8 mt-4 hover:text-black cursor-pointer">
+                                   
+                                Our Team</li>
+                                <li  class="pFont text-gray-600 text-lg ml-8 mt-4 mb-4 hover:text-black cursor-pointer">
+                                    
+                                Blog</li>
+
+                              
+
+                        </div>
+
+                        <li class="inline  pl-6 pFont text-gray-600 hover:text-black cursor-pointer">Career
+                        </li>
+                        <li class="inline  pl-6 pFont text-gray-600 hover:text-black cursor-pointer">About</li>
+                    </ol>
+                    
+                </div>
+                    
+                <div class=" w-1/5">
+                    <button class="p-2 font-normal pFont text-gray-600 cursor-pointer hover:text-black ">Login</button>
+                    <button class="ml-6 pFont border-2 solid border-gray-500 rounded-2xl p-3 text-gray-600 font-medium hover:text-black cursor-pointer " >Register</button>
+                </div>  
+            </nav>  
+
+
+                <!-- NAVIGATION BAR FOR MOBILE SCREEN'S -->
+
+
+                <nav class="flex justify-around  mt-6 sm:hidden"> 
+                    <div class="w-full ml-6 ">
+                        <img src="./images/logo.svg" width="100" alt="">
+                    </div>
+
+                    <div class="w-1/5">
+                        <img onclick="showMenue()" src="./images/icon-menu.svg" alt="">
+                    </div>
+                </nav>
+
+
+                <!-- HAMBURGER MENUE ITEMS FOR MOBILE SCREEN -->
+
+                <div id="menuitems" class="hidden flex-col bg-white absolute top-0 w-8/12 ml-36 h-full">
+                    <div class="ml-52 mt-6">
+                        <img onclick="closeMenuItems()" src="./images/icon-close-menu.svg" width="30" alt="">
+                    </div>
+
+                    <div class="mt-12">
+                        <ul>
+                            <li class="pFont text-gray-600 text-xl ml-8">Features
+                                <img onclick="showMore1()" src="./images/icon-arrow-down.svg" width="20" class="inline ml-2" alt="">
+                               
+                            </li>
+                             <div id="showMoreItems" style="display: none;  margin-left: 1em;">
+                                <li  class="pFont text-gray-600 text-lg ml-8 mt-4">
+                                    <img src="./images/icon-todo.svg" width="20" class="inline mr-2" >
+                                    Todo list</li>
+                                    <li  class="pFont text-gray-600 text-lg ml-8 mt-4">
+                                        <img src="./images/icon-calendar.svg" width="20" class="inline mr-2" >
+                                    Calander</li>
+                                    <li  class="pFont text-gray-600 text-lg ml-8 mt-4">
+                                        <img src="./images/icon-reminders.svg" width="20" class="inline mr-2" >
+                                    Reminders</li>
+
+                                    <li  class="pFont text-gray-600 text-lg ml-8 mt-4">
+                                        <img src="./images/icon-planning.svg" width="20" class="inline mr-2" >
+                                        Planing</li>
+
+                            </div>
+                            <li  class="pFont text-gray-600 text-xl ml-8 mt-4">Company
+                                <img onclick="showMore2()" src="./images/icon-arrow-down.svg" width="20" class="inline ml-2" alt="">
+                            </li>
+
+                            <div id="showMoreItems2" style="display: none;  margin-left: 1em;">
+                                <li  class="pFont text-gray-600 text-lg ml-8 mt-4">
+                                   
+                                    History</li>
+                                    <li  class="pFont text-gray-600 text-lg ml-8 mt-4">
+                                       
+                                    Our Team</li>
+                                    <li  class="pFont text-gray-600 text-lg ml-8 mt-4">
+                                        
+                                    Blog</li>
+
+                                  
+
+                            </div>
+
+                            <li  class="pFont text-gray-600 text-xl ml-8 mt-4">Careers</li>
+                            <li  class="pFont text-gray-600 text-xl ml-8 mt-4">About</li>
+                        </ul>
+                    </div>
+                   
+                <div>
+                    <button class="w-full pFont text-gray-600 text-xl mt-8">
+                        Login
+                    </button>
+
+                    <button class="block m-auto pFont text-gray-600 text-xl mt-8 border solid border-gray-600 rounded-2xl p-4 pl-16 pr-16">
+                        Register
+                    </button>
+                </div>
+                   
+                </div>
+                
+        </header>
+
+
+
+        <body>
+            
+
+            <!-- DESKTOP SECTION FOR MAIN CONTAINER -->
+
+            <section class="sm:block hidden">
+                <div class="flex">
+
+                        <div class=" p-28">
+                            <h1 class="hFont text-6xl">Make <br/> remote work</h1>
+
+                            <h3 class="mt-8 text-xl text-gray-400 pFont">
+                                Get your team in sync, no matter you location.
+                                Streamline process, crGet your team in sync, no matter you location. Streamline process, create team rituals, and watch productivity soar.
+                                eate team rituals, and
+                                watch productivity soar.
+                            </h3>
+
+                            <button class="bg-black font-medium text-white p-4 pl-8 pr-8  rounded-2xl  text-lg pFont mt-12 hover:bg-gray-50  border border-solid border-black   hover:text-black">
+                                Learn More
+                            </button>
+
+
+                            <div class="mt-24 flex justify-around items-center">
+                                <img width="100" height="100" src="./images/client-databiz.svg" alt="">
+                                <img width="100" height="100" src="./images/client-audiophile.svg" alt="">
+                                <img width="100" height="100" src="./images/client-meet.svg" alt="">
+                                <img width="100" height="100" src="./images/client-maker.svg" alt="">
+                            </div>
+                        </div>
+
+
+
+                    <div class="pl-32 pr-32 pt-12 pb-32">
+
+                        <img  width="700" src="images/image-hero-desktop.png" alt="">
+
+                            </div>
+
+                </div>
+            </section>
+
+
+
+            <!-- MOBILE SECTION FOR MAIN COMPONENT -->
+
+            <section class="sm:hidden block">
+                <div class="flex flex-col">
+                    <div class="mt-4">
+                        <img src="./images/image-hero-mobile.png" alt="">
+                    </div>
+
+
+                    <div>
+                        <h1 class="hFont text-4xl text-center mt-8">Make remote work</h1>
+                        
+                        <p class="mt-0 text-xl text-gray-400 pFont text-center p-4">
+                            Get your team in sync, no matter you location.
+                                Streamline process, watch thier productivity, no matter your location.
+                        </p>
+
+                        <button class="block m-auto bg-black font-medium text-white p-4 pl-8 pr-8  rounded-2xl  text-lg pFont mt-6">
+                            Learn More
+                        </button>
+
+                        <div class="mt-24 flex justify-around items-center">
+                            <img width="70" height="70" src="./images/client-databiz.svg" alt="">
+                            <img width="70" height="70" src="./images/client-audiophile.svg" alt="">
+                            <img width="70" height="70" src="./images/client-meet.svg" alt="">
+                            <img width="70" height="7S" src="./images/client-maker.svg" alt="">
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </body>
+</body>
+</html>
